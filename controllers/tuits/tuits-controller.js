@@ -21,7 +21,7 @@ const createTuit = (req, res) => {
 	const newTuit = {
 		...req.body,
 		...templateTuit,
-		"_id": (new Date()).getTime()};
+		"_id": (new Date()).getTime() + ''};
 	// console.log(newTuit)
 	// newTuit._id = (new Date()).getTime()+'';
 	tuits.push(newTuit);
