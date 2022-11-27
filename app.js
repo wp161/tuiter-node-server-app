@@ -3,6 +3,13 @@ import cors from 'cors'
 import HelloController from "./controllers/hello-controller.js";
 import UserController from "./controllers/users/user-controller.js";
 import TuitsController from "./controllers/tuits/tuits-controller.js";
+import mongoose from "mongoose";
+
+const CONNECTION_STRING = "mongodb+srv://tuiter-app:t0ACh19cGC4NJ0CG@cluster0.dvfcwmn.mongodb.net/?retryWrites=true&w=majority"
+
+// const CONNECTION_STRING = 'mongodb://localhost:27017/tuiter'
+
+mongoose.connect(CONNECTION_STRING)
 
 const app = express()
 app.use(cors())
